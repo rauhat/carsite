@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volkswagen Polo</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/car_about_style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="background-container">
+      <img
+        src="data:image/jpg;base64,{{ car['image']|b64encode }}"
+        alt="Photo of car"
+        class="background-image"
+      />
+      <div class="content">
+        <h1>{{ car['name'] }}</h1>
+        <p>От {{ car['price'] }} ₸</p>
+        <button class="cta">Подробнее</button>
+      </div>
+    </div>
+
+    <header>
+      <nav>
+        <div class="logo">AUTORIDE</div>
+        <ul>
+          <li><a href="{{ url_for('index')}}">Home</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="{{ url_for('favourites')}}">Cart</a></li>
+          <li><a href="#Footer">Contact</a></li>
+          <li><a href="{{ url_for('news')}}">News</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="{{ url_for('authorize')}}"
+            ><button class="sign-up">Sign up</button></a
+          >
+          <a href="{{ url_for('registr')}}"
+            ><button class="log-in">Log in</button></a
+          >
+          <div class="profile-photo" href="/templates/profile.html">
+            <a href="{{ url_for('profile')}}">
+              <img src="/static/img/l2 1.png" alt="Profile" />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="characteristics">
+        <h2>ХАРАКТЕРИСТИКИ</h2>
+        <div class="char-grid">
+          <div class="char-item">
+            <h3>Объем двигателя</h3>
+            <h1>{{ car['engine'] }}</h1>
+            <p>Объем двигателя влияет на его мощность и производительность</p>
+          </div>
+          <div class="container_1">
+            <div class="vertical-line"></div>
+          </div>
+          <div class="char-item">
+            <h3>Максимальная скорость</h3>
+            <h1>{{ car['max_speed'] }}</h1>
+            <p>
+              Максимальная скорость характеризует наибольшее усилие вращения,
+              которое двигатель может развить
+            </p>
+          </div>
+          <div class="container_1">
+            <div class="vertical-line"></div>
+          </div>
+          <div class="char-item">
+            <h3>Мощь</h3>
+            <h1>{{ car['power'] }}</h1>
+            <p>
+              Технологиеские приборы и датчики которые облегчают работу водителя
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="naming">{{ car['title'] }}</h2>
+      <section class="description">
+        <img class="wr" src="/static/img/forall.jpg" alt="Volkswagen" />
+        <p class="car_about_text">{{ car['description'] }}</p>
+      </section>
+      <form
+        action="{{ url_for('add_to_favourites', car_name=car['name']) }}"
+        method="POST"
+      >
+        <button type="submit" class="cta_button">Добавить в корзину</button>
+      </form>
+
+      <form
+        action="{{ url_for('add_to_favourites', car_name=car['name']) }}"
+        method="POST"
+      >
+        <button type="submit">Добавить в корзину</button>
+      </form>
+
+      <section class="request-section" id="Contact">
+        <div class="request-container">
+          <h2 class="request-title">Закажите услугу прямо сейчас!</h2>
+          <p class="request-description">
+            Оставьте заявку и с вами свяжется менеджер в ближайшее время.
+          </p>
+          <form class="request-form" action="#" method="POST">
+            <input
+              type="text"
+              id="request-name"
+              name="name"
+              placeholder="Напишите Ваше Имя"
+              required
+            />
+            <input
+              type="tel"
+              id="request-phone"
+              name="phone"
+              placeholder="+7(___) ___-__-__"
+              required
+            />
+            <input
+              type="email"
+              id="request-email"
+              name="email"
+              placeholder="e-mail"
+              required
+            />
+            <button type="submit" class="request-submit">
+              Оставить заявку
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div class="vw-page-wrapper">
+      <main class="vw-main-content">
+        <!-- Здесь будет основное содержимое страницы -->
+      </main>
+      <footer class="vw-footer">
+        <div class="vw-footer__content">
+          <div class="vw-footer__column vw-footer__logo-column">
+            <img
+              src="/static/img/logo.png"
+              alt="Volkswagen logo"
+              class="vw-footer__logo-img"
+            />
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Модели</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Polo</a></li>
+              <li><a href="#" class="vw-footer__link">Jetta</a></li>
+              <li><a href="#" class="vw-footer__link">Tiguan</a></li>
+              <li><a href="#" class="vw-footer__link">Passat</a></li>
+              <li><a href="#" class="vw-footer__link">Teramont</a></li>
+              <li><a href="#" class="vw-footer__link">Touareg</a></li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Контакты</h3>
+            <ul class="vw-footer__list">
+              <li>
+                <a href="tel:+77076859646" class="vw-footer__link"
+                  >+7 (707) 685-96-46</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@volk-ast.kz" class="vw-footer__link"
+                  >info@volk-ast.kz</a
+                >
+              </li>
+              <li>
+                <a href="#" class="vw-footer__link">г.Астана пр. Туран 78</a>
+              </li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Услуги</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Виды обслуживаний</a></li>
+              <li><a href="#" class="vw-footer__link">Гарантии</a></li>
+              <li><a href="#" class="vw-footer__link">Консультации</a></li>
+              <li>
+                <a href="#" class="vw-footer__link">Специальные предложения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">О нас</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Наши филиалы</a></li>
+              <li><a href="#" class="vw-footer__link">Сотрудники</a></li>
+              <li><a href="#" class="vw-footer__link">Соцсети</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="vw-footer__copyright">
+          <p>&copy; AUTORIDE Kazakhstan 2024. Все права защищены</p>
+          <div class="vw-footer__social">
+            <a href="#" class="vw-footer__social-link">Facebook</a>
+            <a href="#" class="vw-footer__social-link">YouTube</a>
+            <a href="#" class="vw-footer__social-link">Instagram</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const images = [
+        "/img/polo_back.png",
+        "/img/blue_polo.jpg", // Добавьте сюда другие изображения
+        "/img/polo_back_3.png",
+      ];
+
+      let currentIndex = 0;
+
+      function updateImage() {
+        const imageElement = document.getElementById("carouselImage");
+        imageElement.src = images[currentIndex];
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+      }
+    </script>
+  </body>
+</html>

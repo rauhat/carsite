@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volkswagen News</title>
+    <link rel="stylesheet" href="./static/style/news.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">AUTORIDE</div>
+        <ul>
+          <li><a href="{{ url_for('index')}}">Home</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="{{ url_for('favourites')}}">Cart</a></li>
+          <li><a href="#Footer">Contact</a></li>
+          <li><a href="{{ url_for('news')}}">News</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="{{ url_for('authorize')}}"
+            ><button class="sign-up">Sign up</button></a
+          >
+          <a href="{{ url_for('registr')}}"
+            ><button class="log-in">Log in</button></a
+          >
+          <div class="profile-photo" href="/templates/profile.html">
+            <a href="{{ url_for('profile')}}">
+              <img src="/static/img/l2 1.png" alt="Profile" />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>VOLKSWAGEN NEWS</h1>
+      <div class="news-container">
+        <article class="news-item">
+          <a href="#" class="news-link">
+            <img
+              src="https://tengriauto.kz/userdata/news/2024/news_546725/thumb_b/photo_484888.jpeg.webp"
+              alt="Volkswagen logo"
+              class="news-image"
+            />
+            <p class="news-text">
+              Volkswagen в рамках программы по сокращению расходов на больший
+              бизнес VW больше не включает закрытие заводов и существенных
+              сокращений персонала, рассказали участники в Германии...
+            </p>
+          </a>
+        </article>
+        <article class="news-item">
+          <a href="#" class="news-link">
+            <img
+              src="https://kolesa-photos.kcdn.online/kolesa-read/c4695145b85b460567b3b3d98a658989d2b275ec-1193x671.jpg"
+              alt="Road in Kazakhstan"
+              class="news-image"
+            />
+            <p class="news-text">
+              В Казахстане запустят систему контроля качества дорог: Президент
+              Касым-Жомарт Токаев поручил создать единую цифровую платформу, в
+              которой казахстанцы смогут отслеживать строительство и ремонт
+              дорог...
+            </p>
+          </a>
+        </article>
+        <article class="news-item">
+          <a href="#" class="news-link">
+            <img
+              src="https://kolesa-photos.kcdn.online/kolesa-read/686837faa4079a8343daffd956512b90ea8559e0-1193x671.jpg"
+              alt="Car engine"
+              class="news-image"
+            />
+            <p class="news-text">
+              Техосмотр в Казахстане: новые правила появятся до конца года.
+              Правила должны стать более гибкими поэтому правительству удалить
+              особое внимание вопросам снижения количества дорожно-транспортных
+              происшествий...
+            </p>
+          </a>
+        </article>
+        <article class="news-item">
+          <a href="#" class="news-link">
+            <img
+              src="https://static.mk.ru/upload/entities/2023/03/05/16/articles/detailPicture/29/22/07/00/93749f8083eacdb2aaab08d7bfdfc3da.jpg"
+              alt="Car engine"
+              class="news-image"
+            />
+            <p class="news-text">
+              Новые горизонты автомобильной индустрии Казахстана: тенденции и
+              новшества Казахстанская автомобильная индустрия продолжает
+              развиваться. В этом месяце на рынке появились несколько интересных
+              новинок, которые привлекли внимание автолюбителей....
+            </p>
+          </a>
+        </article>
+        <article class="news-item">
+          <a href="#" class="news-link">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw41s_LOqT1wXXLGlgczOKmgXGhRISZQPPWg&s"
+              alt="Car engine"
+              class="news-image"
+            />
+            <p class="news-text">
+              Казахстан: автомобильный рынок в условиях новых реалий
+              автомобильная отрасль продолжает адаптироваться к современным
+              вызовам. В этом месяце произошло несколько ключевых событий,
+              которые заслуживают внимания автолюбителей и специалистов....
+            </p>
+          </a>
+        </article>
+        <!-- Add more news items as needed -->
+      </div>
+    </main>
+    <div class="vw-page-wrapper" id="Footer">
+      <main class="vw-main-content">
+        <!-- Здесь будет основное содержимое страницы -->
+      </main>
+      <footer class="vw-footer">
+        <div class="vw-footer__content">
+          <div class="vw-footer__column vw-footer__logo-column">
+            <img
+              src="/static/img/logo.png"
+              alt="Volkswagen logo"
+              class="vw-footer__logo-img"
+            />
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Модели</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Polo</a></li>
+              <li><a href="#" class="vw-footer__link">Jetta</a></li>
+              <li><a href="#" class="vw-footer__link">Tiguan</a></li>
+              <li><a href="#" class="vw-footer__link">Passat</a></li>
+              <li><a href="#" class="vw-footer__link">Teramont</a></li>
+              <li><a href="#" class="vw-footer__link">Touareg</a></li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Контакты</h3>
+            <ul class="vw-footer__list">
+              <li>
+                <a href="tel:+77076859646" class="vw-footer__link"
+                  >+7 (707) 685-96-46</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@volk-ast.kz" class="vw-footer__link"
+                  >info@volk-ast.kz</a
+                >
+              </li>
+              <li>
+                <a href="#" class="vw-footer__link">г.Астана пр. Туран 78</a>
+              </li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Услуги</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Виды обслуживаний</a></li>
+              <li><a href="#" class="vw-footer__link">Гарантии</a></li>
+              <li><a href="#" class="vw-footer__link">Консультации</a></li>
+              <li>
+                <a href="#" class="vw-footer__link">Специальные предложения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">О нас</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Наши филиалы</a></li>
+              <li><a href="#" class="vw-footer__link">Сотрудники</a></li>
+              <li><a href="#" class="vw-footer__link">Соцсети</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="vw-footer__copyright">
+          <p>&copy; AUTORIDE Kazakhstan 2024. Все права защищены</p>
+          <div class="vw-footer__social">
+            <a href="#" class="vw-footer__social-link">Facebook</a>
+            <a href="#" class="vw-footer__social-link">YouTube</a>
+            <a href="#" class="vw-footer__social-link">Instagram</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

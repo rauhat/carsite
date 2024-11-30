@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Order Confirmation</title>
+    <link rel="stylesheet" href="./static/style/order.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <a href="{{ url_for('favourites')}}"
+        ><button class="close-button">&times;</button></a
+      >
+      <div class="order-info">
+        <h2>Вы уверены что хотите оформить заказ на:</h2>
+        <div class="car-details">
+          <img
+            src="/static/img/teramont.jpg"
+            alt="Car Image"
+            class="car-image"
+          />
+          <div class="price-info">
+            <p>Общая сумма:</p>
+            <p class="price">9 490 000 тг.</p>
+          </div>
+        </div>
+      </div>
+      <form class="order-form">
+        <input type="text" placeholder="Напишите Ваше Имя" required />
+        <input type="tel" placeholder="+7(___)___-__-__" required />
+        <input type="email" placeholder="e-mail" required />
+        <button type="submit" class="submit-button">Оформить заказ</button>
+      </form>
+    </div>
+  </body>
+</html>

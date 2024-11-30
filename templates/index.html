@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <link
+      href="{{ url_for('static', filename='style/style.css') }}"
+      rel="stylesheet"
+      id="theme-stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='style/reset.css') }}"
+      rel="stylesheet"
+      id="theme-stylesheet"
+    />
+
+    <title>AutoRide</title>
+  </head>
+  <body>
+    <div class="background-carousel">
+      <div class="carousel-images">
+        <div class="carousel-item active">
+          <div
+            class="carousel-image"
+            style="background-image: url('./static/img/passat.jpg')"
+          ></div>
+          <div class="content">
+            <h1>VOLKSWAGEN PASSAT</h1>
+            <p>От 13 800 000 ₸</p>
+            <button class="cta">
+              <a href="" class="cta">Подробнее</a>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-image"
+            style="background-image: url('./static/img/tiguan.jpg')"
+          ></div>
+          <div class="content">
+            <h1>VOLKSWAGEN TIGUAN</h1>
+            <p>От 9 500 000 ₸</p>
+            <button class="cta">Подробнее</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-image"
+            style="background-image: url('./static/img/touareg.jpg')"
+          ></div>
+          <div class="content">
+            <h1>VOLKSWAGEN TOUAREG</h1>
+            <p>От 12 000 000 ₸</p>
+            <button class="cta">Подробнее</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-image"
+            style="background-image: url('./static/img/jetta.jpg')"
+          ></div>
+          <div class="content">
+            <h1>VOLKSWAGEN JETTA</h1>
+            <p>От 10 000 000 ₸</p>
+            <button class="cta">Подробнее</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-image"
+            style="background-image: url('./static/img/polo.jpg')"
+          ></div>
+          <div class="content">
+            <h1>VOLKSWAGEN POLO</h1>
+            <p>От 8 800 000 ₸</p>
+            <button class="cta">Подробнее</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-image"
+            style="background-image: url('./static/img/teramont.jpg')"
+          ></div>
+          <div class="content">
+            <h1>VOLKSWAGEN TERAMONT</h1>
+            <p>От 11 000 000 ₸</p>
+            <button class="cta">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-button prev">&lt;</button>
+      <button class="carousel-button next">&gt;</button>
+    </div>
+    <header>
+      <nav>
+        <div class="logo">AUTORIDE</div>
+        <ul>
+          <li><a href="{{ url_for('index')}}">Home</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="{{ url_for('favourites')}}">Cart</a></li>
+          <li><a href="#Footer">Contact</a></li>
+          <li><a href="{{ url_for('news')}}">News</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="{{ url_for('registr')}}"
+            ><button class="sign-up">Sign up</button></a
+          >
+          <a href="{{ url_for('authorize')}}"
+            ><button class="log-in">Log in</button></a
+          >
+          <div class="profile-photo" href="/templates/profile.html">
+            <a href="{{ url_for('profile')}}">
+              <img src="/static/img/l2 1.png" alt="Profile" />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- {{cars}} -->
+
+    <div class="container" id="models">
+      <h1>Модельный ряд</h1>
+
+      <h2>Выбор за вами!</h2>
+      <div class="model-grid">
+        <div
+          class="model-card"
+          onclick="window.location.href='/car_about/Volkswagen Polo';"
+        >
+          <img src="/static/img/image 1.png" alt="Polo" class="model-image" />
+          <div class="model-name">Polo</div>
+        </div>
+        <div
+          class="model-card"
+          onclick="window.location.href='/car_about/Volkswagen Jetta';"
+        >
+          <img src="/static/img/image 3.png" alt="Jetta" class="model-image" />
+          <div class="model-name">Jetta</div>
+        </div>
+        <div
+          class="model-card"
+          onclick="window.location.href='/car_about/Volkswagen Tiguan';"
+        >
+          <img
+            src="/static/img/image 4.png"
+            alt="Tiguan 2024"
+            class="model-image"
+          />
+          <div class="model-name">Tiguan 2024</div>
+        </div>
+
+        <div
+          class="model-card"
+          ]
+          onclick="window.location.href='/car_about/Volkswagen Teramont';"
+        >
+          <img
+            src="/static/img/image 5.png"
+            alt="Teramont"
+            class="model-image"
+          />
+          <div class="model-name">Teramont</div>
+        </div>
+        <div
+          class="model-card"
+          onclick="window.location.href='/car_about/Volkswagen Passat';"
+        >
+          <img src="/static/img/image 6.png" alt="Passat" class="model-image" />
+          <div class="model-name">Passat</div>
+        </div>
+        <div
+          class="model-card"
+          onclick="window.location.href='/car_about/Volkswagen Touareg';"
+        >
+          <img
+            src="/static/img/image 7.png"
+            alt="Touareg"
+            class="model-image"
+          />
+          <div class="model-name">Touareg</div>
+        </div>
+      </div>
+    </div>
+    <section class="services-section">
+      <div class="services-container">
+        <h2 class="services-title">НАШИ УСЛУГИ</h2>
+        <p class="services-description">
+          Доверьте нам безопасность вашего автомобиля<br />
+          Проводите техническое обслуживание вашего Volkswagen только в салонах
+          официальных дилеров и<br />
+          получайте безупречный сервис с сохранением гарантийных обязательств
+          бренда.
+        </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <img
+              src="/static/img/image 8.png"
+              alt="Обслуживание машин"
+              class="service-image"
+            />
+            <h3 class="service-title">Обслуживание машин</h3>
+          </div>
+          <div class="service-card">
+            <img
+              src="/static/img/image 9.png"
+              alt="Документация и гарантии"
+              class="service-image"
+            />
+            <h3 class="service-title">Документация и гарантии</h3>
+          </div>
+          <div class="service-card">
+            <img
+              src="/static/img/image 10.png"
+              alt="Полное сопровождение и консультация"
+              class="service-image"
+            />
+            <h3 class="service-title">Полное сопровождение и консультация</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="request-section" id="Contact">
+      <div class="request-container">
+        <h2 class="request-title">Закажите услугу прямо сейчас!</h2>
+        <p class="request-description">
+          Оставьте заявку и с вами свяжется менеджер в ближайшее время.
+        </p>
+        <form class="request-form" action="#" method="POST">
+          <input
+            type="text"
+            id="request-name"
+            name="name"
+            placeholder="Напишите Ваше Имя"
+            required
+          />
+          <input
+            type="tel"
+            id="request-phone"
+            name="phone"
+            placeholder="+7(___) ___-__-__"
+            required
+          />
+          <input
+            type="email"
+            id="request-email"
+            name="email"
+            placeholder="e-mail"
+            required
+          />
+          <button type="submit" class="request-submit">Оставить заявку</button>
+        </form>
+      </div>
+    </section>
+    <div class="location-container">
+      <div class="info-panel">
+        <h2 class="city-name">Астана</h2>
+        <div class="contact-info">
+          <h3>Volkswagen Center</h3>
+          <p>Адрес: г. Астана, пр. Туран 78</p>
+          <p>Телефон: <a href="tel:+77710607740">8 (771) 060-77-40</a></p>
+          <p>Email: <a href="mailto:info@volk-ast.kz">info@volk-ast.kz</a></p>
+        </div>
+      </div>
+      <div class="map-container">
+        <div class="yandex-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.8775043863384!2d71.38999087659424!3d51.0738112717179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586de0072653f%3A0x4afcda5ef2555eed!2sVolkswagen%20Centre%20Astana!5e0!3m2!1sru!2skz!4v1732601639340!5m2!1sru!2skz"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="vw-page-wrapper" id="Footer">
+      <main class="vw-main-content">
+        <!-- Здесь будет основное содержимое страницы -->
+      </main>
+      <footer class="vw-footer">
+        <div class="vw-footer__content">
+          <div class="vw-footer__column vw-footer__logo-column">
+            <img
+              src="/static/img/logo.png"
+              alt="Volkswagen logo"
+              class="vw-footer__logo-img"
+            />
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Модели</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Polo</a></li>
+              <li><a href="#" class="vw-footer__link">Jetta</a></li>
+              <li><a href="#" class="vw-footer__link">Tiguan</a></li>
+              <li><a href="#" class="vw-footer__link">Passat</a></li>
+              <li><a href="#" class="vw-footer__link">Teramont</a></li>
+              <li><a href="#" class="vw-footer__link">Touareg</a></li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Контакты</h3>
+            <ul class="vw-footer__list">
+              <li>
+                <a href="tel:+77076859646" class="vw-footer__link"
+                  >+7 (707) 685-96-46</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@volk-ast.kz" class="vw-footer__link"
+                  >info@volk-ast.kz</a
+                >
+              </li>
+              <li>
+                <a href="#" class="vw-footer__link">г.Астана пр. Туран 78</a>
+              </li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">Услуги</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Виды обслуживаний</a></li>
+              <li><a href="#" class="vw-footer__link">Гарантии</a></li>
+              <li><a href="#" class="vw-footer__link">Консультации</a></li>
+              <li>
+                <a href="#" class="vw-footer__link">Специальные предложения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="vw-footer__column">
+            <h3 class="vw-footer__heading">О нас</h3>
+            <ul class="vw-footer__list">
+              <li><a href="#" class="vw-footer__link">Наши филиалы</a></li>
+              <li><a href="#" class="vw-footer__link">Сотрудники</a></li>
+              <li><a href="#" class="vw-footer__link">Соцсети</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="vw-footer__copyright">
+          <p>&copy; AUTORIDE Kazakhstan 2024. Все права защищены</p>
+          <div class="vw-footer__social">
+            <a href="#" class="vw-footer__social-link">Facebook</a>
+            <a href="#" class="vw-footer__social-link">YouTube</a>
+            <a href="#" class="vw-footer__social-link">Instagram</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+  </body>
+</html>

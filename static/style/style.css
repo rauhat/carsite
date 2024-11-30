@@ -1,0 +1,682 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #eee9e9;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Обновите эти стили в вашем существующем CSS файле */
+
+/* Обновите эти стили в вашем существующем CSS файле */
+
+.background-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Изменено с фиксированной высоты на высоту viewport */
+  max-height: 800px; /* Добавлено максимальное значение высоты */
+  overflow: hidden;
+  margin-bottom: 2rem; /* Добавлен отступ снизу */
+}
+
+.carousel-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ... остальные стили карусели остаются без изменений ... */
+
+/* Обновите стили для контейнера после карусели */
+
+/* ... остальные стили остаются без изменений ... */
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: #000;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  background-color: #3ac3e6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Остальные стили остаются без изменений */
+
+.content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding-bottom: 20%;
+}
+.content h1 {
+  color: #fff;
+}
+header {
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3498db;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.auth-buttons button {
+  padding: 0.7rem 1.3rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sign-up {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.sign-up:hover {
+  background-color: #aca7a7;
+}
+
+.log-in {
+  background-color: #007bff;
+  color: white;
+}
+
+.log-in:hover {
+  background-color: #2980b9;
+}
+
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta {
+  background-color: #3ac3e6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 2rem; /* Изменено с процентного значения на rem */
+}
+
+/* Обновите стили для заголовка h1 после карусели */
+.container h1 {
+  text-align: center;
+  color: #333;
+  padding-top: 2rem; /* Изменено с процентного значения на rem */
+  font-size: 50px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 10%;
+}
+
+.model-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.model-card:hover {
+  transform: translateY(-5px);
+}
+
+.model-image {
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.model-name {
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2em;
+  color: #090f1a;
+}
+
+.services-section {
+  padding: 40px 20px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.services-description {
+  text-align: center;
+  margin-bottom: 100px;
+  line-height: 1.6;
+  color: #000;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  color: #000;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-title {
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  font-size: 1.2em;
+}
+.request-section {
+  background-color: #2196f3;
+  padding: 100px 100px;
+  color: white;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 200px;
+  margin-bottom: 150px;
+  margin-top: 150px;
+}
+.request-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-right: 24%;
+  color: #fff;
+}
+
+.request-description {
+  font-size: 16px;
+  margin-top: 40px;
+  margin: 30px;
+  color: #f7f1f1;
+}
+.request-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.request-form input {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.request-form input::placeholder {
+  color: #999;
+}
+
+.request-submit {
+  background-color: #03a9f4;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.request-submit:hover {
+  background-color: #0288d1;
+}
+
+.location-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10%;
+}
+
+.info-panel {
+  flex: 1;
+}
+
+.city-name {
+  font-size: 26px;
+  font-weight: bold;
+  padding: 20px;
+  padding-right: 70%;
+  border-bottom: 2px solid #000;
+  background-color: #000;
+  color: #fff;
+  position: static;
+  margin: 0;
+  width: 100%;
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  color: #000;
+  padding-top: 30px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  padding-left: 20px;
+  color: #000;
+}
+
+.contact-info a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  flex: 2;
+  position: relative;
+  min-height: 600px;
+}
+
+.yandex-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.yandex-map__link {
+  color: #eee;
+  font-size: 12px;
+  position: absolute;
+  z-index: 2;
+}
+
+.yandex-map__link:nth-child(1) {
+  top: 0;
+}
+
+.yandex-map__link:nth-child(2) {
+  top: 14px;
+}
+
+.yandex-map__link:nth-child(3) {
+  top: 28px;
+}
+
+.yandex-map__iframe {
+  position: relative;
+  z-index: 1;
+}
+.vw-page-wrapper {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.vw-main-content {
+  flex: 1 0 auto;
+}
+
+.vw-footer {
+  flex-shrink: 0;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+.vw-footer__content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 40px 20px;
+}
+
+.vw-footer__logo-column {
+  display: flex;
+  align-items: flex-start;
+}
+
+.vw-footer__logo-img {
+  width: 60px;
+  height: auto;
+}
+
+.vw-footer__column {
+  flex-basis: calc(20% - 20px);
+  margin-bottom: 20px;
+}
+
+.vw-footer__heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.vw-footer__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.vw-footer__list li {
+  margin-bottom: 5px;
+}
+
+.vw-footer__link {
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.vw-footer__link:hover,
+.vw-footer__link:focus {
+  color: #00b0f0;
+  transform: translateX(5px);
+}
+
+.vw-footer__copyright {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vw-footer__copyright p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.vw-footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.vw-footer__social-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.vw-footer__social-link:hover,
+.vw-footer__social-link:focus {
+  color: #00b0f0;
+}
+
+@media (max-width: 1024px) {
+  .vw-footer__column {
+    flex-basis: calc(33.33% - 20px);
+  }
+
+  .vw-footer__logo-column {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .model-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-description {
+    font-size: 0.9em;
+  }
+
+  .services-title {
+    font-size: 2em;
+  }
+  .request-title {
+    font-size: 24px;
+  }
+
+  .request-description {
+    font-size: 14px;
+  }
+
+  .request-form input,
+  .request-submit {
+    font-size: 14px;
+  }
+  .location-container {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .city-name {
+    padding-right: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+  .vw-footer__column {
+    flex-basis: calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .vw-footer__column {
+    flex-basis: 100%;
+  }
+
+  .vw-footer__copyright {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vw-footer__social {
+    margin-top: 10px;
+  }
+}

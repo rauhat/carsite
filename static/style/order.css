@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgba(209, 186, 186, 0.5);
+}
+
+.modal {
+  background-color: #cbc9da;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.order-info {
+  background-color: #3498db;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.car-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-image {
+  width: 180px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.price-info {
+  text-align: right;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #2e6cd6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #3c32a6;
+}

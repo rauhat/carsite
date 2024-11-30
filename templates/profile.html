@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./static/style/profile_style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">AUTORIDE</div>
+        <ul>
+          <li><a href="{{ url_for('index')}}">Home</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="{{ url_for('favourites')}}">Cart</a></li>
+          <li><a href="#Footer">Contact</a></li>
+          <li><a href="{{ url_for('news')}}">News</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="{{ url_for('authorize')}}"
+            ><button class="sign-up">Sign up</button></a
+          >
+          <a href="{{ url_for('registr')}}"
+            ><button class="log-in">Log in</button></a
+          >
+          <div class="profile-photo" href="/templates/profile.html">
+            <a href="{{ url_for('profile')}}">
+              <img src="/static/img/l2 1.png" alt="Profile" />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="profile-container">
+      <div class="profile-left">
+        <img
+          src="/static/img/profile_logo.png"
+          alt="Фото профиля"
+          class="profile-image"
+        />
+        <button class="change-photo">Изменить фото</button>
+      </div>
+      <div class="profile-right">
+        <h2>Имя</h2>
+        <p>Номер телефона: +7 (999) 123-45-67</p>
+        <p>Email: example@example.com</p>
+      </div>
+    </div>
+
+    <div class="buttons-container" id="Footer">
+      <div class="button">
+        <img src="/static/img/back.png" alt="Сохраненные" />
+        <p>Сохраненные</p>
+      </div>
+      <div class="button">
+        <img src="/static/img/sale.jpg" alt="Предложения для вас" />
+        <p>Предложения для вас</p>
+      </div>
+      <div class="button">
+        <img src="/static/img/zapis.jpg" alt="Записаться" />
+        <p>Записаться</p>
+      </div>
+      <div class="button">
+        <img src="/static/img/contact.png" alt="Контакты" />
+        <p>Контакты</p>
+      </div>
+    </div>
+  </body>
+</html>
